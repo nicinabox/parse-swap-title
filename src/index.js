@@ -8,7 +8,7 @@ const tagExpansions = {
 }
 
 const patterns = {
-  location: /^(?!IC|GB)(\w{2})(?:-(\w{2}))?$/g,
+  location: /^(?!IC|GB\b)(\w{2,3})(?:-(\w{2}))?$/g,
   money: /cash|paypal|\$|google w|ltc|btc|bitcoin|money/i,
 }
 
@@ -18,7 +18,7 @@ const getLocation = (tag) => {
   if (location) {
     return {
       location: {
-        general: location[1],
+        country: location[1],
         area: location[2] || null,
       }
     }
