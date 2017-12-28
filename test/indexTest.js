@@ -10,36 +10,28 @@ describe('parse', () => {
     it('US', () => {
       const result = parse('[US-MI] [H] Paypal [W] KUL ES-87')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'US',
-        }
+        region: 'US',
       })
     })
 
     it('CA', () => {
       const result = parse('[CA-QC] [H] ZZ96 [W] Paypal')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'CA'
-        }
+        region: 'CA'
       })
     })
 
     it('EU', () => {
       const result = parse('[EU-DE] [H] ZZ96 [W] Paypal')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'EU'
-        }
+        region: 'EU'
       })
     })
 
     it('other countries', () => {
       const result = parse('[CN] [H] Artisans, Keyboards, Keycaps [W] Paypal')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'CN'
-        }
+        region: 'CN'
       })
     })
   })
@@ -48,47 +40,35 @@ describe('parse', () => {
     it('USA', () => {
       const result = parse('[USA-MI] [H] Paypal [W] KUL ES-87')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'USA',
-          area: 'MI'
-        }
+        region: 'USA'
       })
     })
 
     it('CAN', () => {
       const result = parse('[CAN-BC] [H] Paypal [W] KUL ES-87')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'CAN',
-          area: 'BC'
-        }
+        region: 'CAN'
       })
     })
 
     it('GBR', () => {
       const result = parse('[GBR] [H] Paypal [W] KUL ES-87')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'GBR'
-        }
+        region: 'GBR'
       })
     })
 
     it('AUS', () => {
       const result = parse('[AUS] [H] Paypal [W] KUL ES-87')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'AUS'
-        }
+        region: 'AUS'
       })
     })
 
     it('GER', () => {
       const result = parse('[GER] [H] Paypal [W] KUL ES-87')
       expect(result, 'to satisfy', {
-        location: {
-          country: 'GER'
-        }
+        region: 'GER'
       })
     })
   })
@@ -97,27 +77,21 @@ describe('parse', () => {
     it('UK', () => {
       const result = parse('[EU-UK] [H] ZZ96 [W] Paypal')
       expect(result, 'to satisfy', {
-        location: {
-          area: 'UK'
-        }
+        location: 'UK'
       })
     })
 
     it('states', () => {
       const result = parse('[US-MI] [H] ZZ96 [W] Paypal')
       expect(result, 'to satisfy', {
-        location: {
-          area: 'MI'
-        }
+        location: 'MI'
       })
     })
 
     it('provinces', () => {
       const result = parse('[CA-BC] [H] ZZ96 [W] Paypal')
       expect(result, 'to satisfy', {
-        location: {
-          area: 'BC'
-        }
+        location: 'BC'
       })
     })
   })
