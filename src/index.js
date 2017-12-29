@@ -17,8 +17,8 @@ const getLocation = (tag) => {
 
   if (location) {
     return {
-      region: location[1],
-      location: location[2] || null,
+      zone: location[1],
+      region: location[2] || null,
     }
   }
 }

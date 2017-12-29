@@ -10,8 +10,8 @@ to this:
 
 ```
 {
-  "region": "US",
-  "location": "MI",
+  "zone": "US",
+  "region": "MI",
   "have": "Paypal",
   "type": "buying",
   "want": "KUL ES-87"
