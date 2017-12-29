@@ -1,6 +1,6 @@
 {
-  "name": "mechmarket-title-parser",
-  "version": "1.0.0",
+  "name": "swap-parser",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
