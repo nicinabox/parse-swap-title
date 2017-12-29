@@ -26,6 +26,7 @@ const getLocation = (tag) => {
 const getType = ({ have, want, type }) => {
   if (isMoney(want)) return 'selling'
   if (isMoney(have)) return 'buying'
+  if (want && have && !isMoney(want) && !isMoney(have)) return 'trading'
   return type
 }
 

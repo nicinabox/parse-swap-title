@@ -112,6 +112,15 @@ describe('parse', () => {
     })
   })
 
+  it('trade', () => {
+    const result = parse('[US-ME][H] GMK Skidolcha [W] other GMK keyset')
+    expect(result, 'to satisfy', {
+      want: 'other GMK keyset',
+      have: 'GMK Skidolcha',
+      type: 'trading'
+    })
+  })
+
   it('meta', () => {
     const result = parse('[META] Scam by u/Maximum6')
     expect(result, 'to satisfy', {
