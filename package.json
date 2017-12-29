@@ -1,5 +1,5 @@
 {
-  "name": "swap-parser",
+  "name": "parse-swap-title",
   "version": "0.1.0",
   "main": "lib/index.js",
   "license": "MIT",

@@ -1,4 +1,4 @@
-# swap-parser
+# parse-swap-title
 
 Parses strings like this:
 
@@ -21,7 +21,7 @@ to this:
 ## Usage
 
 ```javascript
-import parse from 'swap-parser'
+import parseTitle from 'parse-swap-title'
 
-const result = parse('[US-MI] [H] Paypal [W] KUL ES-87')
+const result = parseTitle('[US-MI] [H] Paypal [W] KUL ES-87')
 ```
