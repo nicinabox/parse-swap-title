@@ -168,4 +168,11 @@ describe('parse', () => {
       type: 'giveaway',
     })
   })
+
+  it('handles double tags', () => {
+    const result = parse('[Vendor][GB] R9 Zilents / Zealios / Tealios / Zealencios / Z-Stabilizers Preorder Now Live!')
+    expect(result, 'to satisfy', {
+      type: 'group_buy'
+    })
+  })
 })
